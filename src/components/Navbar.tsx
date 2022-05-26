@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   AppBar,
   Avatar,
@@ -7,6 +8,8 @@ import {
   Toolbar,
   Typography,
   Box,
+  Menu,
+  MenuItem,
 } from "@mui/material";
 import Brightness3Icon from "@mui/icons-material/Brightness3";
 import { Mail, Notifications } from "@mui/icons-material";
@@ -42,6 +45,9 @@ const UserBox = styled(Box)(({ theme }) => ({
 }));
 
 const Navbar = () => {
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+  const open = Boolean(anchorEl);
+
   return (
     <AppBar position="sticky">
       <StyledToobar>
@@ -62,9 +68,10 @@ const Navbar = () => {
           <Avatar
             src="https://i.imgur.com/bt3nvMM.jpg"
             sx={{ width: 30, height: 30 }}
+            onClick={(e) => setAnchorEl(e.currentTarget)}
           />
         </Icons>
-        <UserBox>
+        <UserBox onClick={(e) => setAnchorEl(e.currentTarget)}>
           <Avatar
             src="https://i.imgur.com/bt3nvMM.jpg"
             sx={{ width: 30, height: 30 }}
@@ -72,6 +79,25 @@ const Navbar = () => {
           <Typography component="span">Loki.C</Typography>
         </UserBox>
       </StyledToobar>
+      <Menu
+        id="profile"
+        aria-labelledby="profile"
+        anchorEl={anchorEl}
+        open={open}
+        onClose={(e) => setAnchorEl(null)}
+        anchorOrigin={{
+          vertical: "bottom",
+          horizontal: "center",
+        }}
+        transformOrigin={{
+          vertical: "top",
+          horizontal: "center",
+        }}
+      >
+        <MenuItem>Profile</MenuItem>
+        <MenuItem>My account</MenuItem>
+        <MenuItem>Logout</MenuItem>
+      </Menu>
     </AppBar>
   );
 };
