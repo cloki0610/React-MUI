@@ -25,6 +25,11 @@ const Search = styled("div")(({ theme }) => ({
   border: "1px solid grey",
   borderRadius: theme.shape.borderRadius,
   width: "40%",
+  input: {
+    "&::placeholder": {
+      color: "grey",
+    },
+  },
 }));
 
 const Icons = styled(Box)(({ theme }) => ({

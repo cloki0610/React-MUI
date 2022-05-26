@@ -1,4 +1,3 @@
-import { useState } from "react";
 import {
   Box,
   List,
@@ -7,6 +6,7 @@ import {
   ListItemIcon,
   ListItemText,
   Switch,
+  PaletteMode,
 } from "@mui/material";
 import {
   AccountBox,
@@ -24,7 +24,7 @@ const Sidebar = ({
   setMode,
 }: {
   mode: string;
-  setMode: (arg0: string) => void;
+  setMode: (arg0: PaletteMode) => void;
 }) => {
   return (
     <Box flex={1} p={2} sx={{ display: { xs: "none", sm: "block" } }}>
