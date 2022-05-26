@@ -22,6 +22,7 @@ const StyledToobar = styled(Toolbar)({
 const Search = styled("div")(({ theme }) => ({
   backgroundColor: "white",
   padding: "0 10px",
+  border: "1px solid grey",
   borderRadius: theme.shape.borderRadius,
   width: "40%",
 }));
@@ -49,7 +50,7 @@ const Navbar = () => {
   const open = Boolean(anchorEl);
 
   return (
-    <AppBar position="sticky">
+    <AppBar position="sticky" color="inherit">
       <StyledToobar>
         <Typography variant="h6" sx={{ display: { xs: "none", sm: "block" } }}>
           Loki*MUI
