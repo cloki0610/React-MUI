@@ -1,6 +1,7 @@
 {
   "name": "react-mui",
   "version": "0.1.0",
+  "homepage": "https://cloki0610.github.io/React-MUI",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.9.0",
