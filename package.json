@@ -1,7 +1,7 @@
 {
   "name": "react-mui",
   "version": "0.1.0",
-  "homepage": "https://cloki0610.github.io/React-MUI",
+  "homepage": "https://cloki0610.github.io/React-MUI/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.9.0",
@@ -15,6 +15,7 @@
     "@types/node": "^16.11.36",
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.5",
+    "gh-pages": "^4.0.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-scripts": "5.0.1",
@@ -25,7 +26,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
